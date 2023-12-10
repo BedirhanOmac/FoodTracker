@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listellipsenineRowModel" type="com.bedirhansapplication.app.modules.shoppinglist.data.model.ListellipsenineRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowellipsenine"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumnellipsenine"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_21pxv"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_weight="0.06" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStylebluegray_7">
+            <View
+                android:background="@drawable/rectangle_bg_bluegray_900_radius_6_65"
+                android:id="@+id/viewEllipseNine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_13pxh"
+                android:layout_marginHorizontal="@dimen/_4pxh"
+                android:layout_marginVertical="@dimen/_4pxv" android:layout_width="@dimen/_13pxh"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowresim2023103"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_weight="0.94" android:layout_width="0dp"
+            android:orientation="horizontal" style="@style/groupStylebluegray_101cornerRadius">
+            <FrameLayout android:id="@+id/frameStackresim2023103"
+                android:layout_height="@dimen/_49pxv"
+                android:layout_marginBottom="@dimen/_9pxv"
+                android:layout_marginStart="@dimen/_12pxh"
+                android:layout_marginTop="@dimen/_9pxv" android:layout_width="@dimen/_53pxh">
+                <ImageView android:id="@+id/imageGeneralCOntainerShopL"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_49pxh"
+                    android:layout_width="@dimen/_53pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_6pxh}"
+                    imageRes="@{@drawable/img_resim2023103_52x57}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_resim2023103_52x57"/>
+                <ImageView android:id="@+id/imageCubukKrakerShopL"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_49pxh"
+                    android:layout_width="@dimen/_53pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_6pxh}"
+                    imageRes="@{@drawable/img_resim2023103_50x54}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_resim2023103_50x54"/>
+            </FrameLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnsampleproduct"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_11pxv"
+                android:layout_marginEnd="@dimen/_9pxh"
+                android:layout_marginStart="@dimen/_13pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_weight="0.82" android:layout_width="0dp" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearRowsampleproduct"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSampleproduct"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.62"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{listellipsenineRowModel.txtSampleproduct}"
+                        style="@style/txtPoppinssemibold17" tools:text="@string/msg_sample_product"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDuration"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_2pxv"
+                        android:layout_marginStart="@dimen/_6pxh"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_weight="0.38"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{listellipsenineRowModel.txtDuration}"
+                        style="@style/txtPoppinsregular12" tools:text="@string/lbl_14_days_passed"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearRowfreshness"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_3pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtFreshness"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{listellipsenineRowModel.txtFreshness}"
+                        style="@style/txtPoppinsregular12" tools:text="@string/lbl_freshness"/>
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_50_border_red_500_radius_3_625"
+                        android:id="@+id/viewRectangleThirtyOne"
+                        android:layout_height="@dimen/_7pxv"
+                        android:layout_marginBottom="@dimen/_4pxv"
+                        android:layout_marginStart="@dimen/_9pxh"
+                        android:layout_marginTop="@dimen/_7pxv" android:layout_width="@dimen/_176pxh"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

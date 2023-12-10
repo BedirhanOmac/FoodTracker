@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="loadingVM" type="com.bedirhansapplication.app.modules.loading.data.viewmodel.LoadingVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameAndroidSmall"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyleblue_200">
+        <ImageView android:id="@+id/imageAppLogo"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_339pxh"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_40pxh"
+            android:layout_marginStart="@dimen/_40pxh"
+            android:layout_marginTop="@dimen/_40pxv"
+            android:layout_width="@dimen/_288pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_resim2023103}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_resim2023103"/>
+    </FrameLayout>
+</layout>

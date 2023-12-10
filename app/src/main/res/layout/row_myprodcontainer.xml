@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="myprodcontainerRowModel" type="com.bedirhansapplication.app.modules.mainmenu.data.model.MyprodcontainerRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowresim"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylebluegray_101cornerRadius">
+        <ImageView android:id="@+id/imageCubukKrakerFoto"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_marginBottom="@dimen/_9pxv"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_9pxv"
+            android:layout_width="@dimen/_54pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_6pxh}"
+            imageRes="@{@drawable/img_resim2023103_50x54}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_resim2023103_50x54"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnsampleproduct"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_11pxv"
+            android:layout_marginEnd="@dimen/_13pxh"
+            android:layout_marginStart="@dimen/_13pxh"
+            android:layout_marginTop="@dimen/_11pxv"
+            android:layout_weight="0.82" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSampleproduct"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{myprodcontainerRowModel.txtSampleproduct}"
+                style="@style/txtPoppinssemibold17" tools:text="@string/msg_sample_product"/>
+            <LinearLayout android:id="@+id/linearRowfreshness"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFreshness"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{myprodcontainerRowModel.txtFreshness}"
+                    style="@style/txtPoppinsregular12" tools:text="@string/lbl_freshness"/>
+                <ProgressBar android:id="@+id/progressBarGroupSixtyNine"
+                    android:indeterminate="false"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_4pxv"
+                    android:layout_marginStart="@dimen/_9pxh"
+                    android:layout_marginTop="@dimen/_7pxv"
+                    android:layout_weight="0.75"
+                    android:layout_width="0dp" android:max="100"
+                    android:minHeight="@dimen/_7pxv"
+                    android:progress="72"
+                    android:progressDrawable="@drawable/layer_list_bg_gray_50_border_orange_300_radius_3_695" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

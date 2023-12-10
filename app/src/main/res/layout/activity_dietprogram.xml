@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="dietprogramVM" type="com.bedirhansapplication.app.modules.dietprogram.data.viewmodel.DietprogramVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyleblue_200">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_21pxv"
+                android:layout_marginEnd="@dimen/_369pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_19pxv"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+        </androidx.appcompat.widget.Toolbar>
+        <FrameLayout android:id="@+id/frameStackdescription"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_730pxv"
+            android:layout_marginEnd="@dimen/_1pxh"
+            android:layout_marginTop="@dimen/_41pxv"
+            android:layout_width="@dimen/_410pxh" style="@style/groupStylewhite_A700">
+            <TextView android:gravity="top|start"
+                android:id="@+id/txtDescription"
+                android:layout_gravity="top|start"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_marginEnd="@dimen/_30pxh"
+                android:layout_marginStart="@dimen/_30pxh"
+                android:layout_width="match_parent"
+                android:text="@{dietprogramVM.dietprogramModel.txtDescription}"
+                style="@style/txtPoppinsregular13" tools:text="@string/msg_breakfast_scra"/>
+            <View
+                android:background="@drawable/rectangle_bg_bluegray_100_radius_2_995"
+                android:id="@+id/lineRectangleSixtyThree"
+                android:layout_gravity="top|end"
+                android:layout_height="@dimen/_569pxv"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_marginEnd="@dimen/_33pxh"
+                android:layout_marginStart="@dimen/_33pxh"
+                android:layout_marginTop="@dimen/_2pxv" android:layout_width="@dimen/_5pxh"/>
+            <View
+                android:background="@drawable/rectangle_bg_gray_900_radius_2_995"
+                android:id="@+id/lineRectangleSixtyFour"
+                android:layout_gravity="top|end"
+                android:layout_height="@dimen/_21pxv"
+                android:layout_marginBottom="@dimen/_47pxv"
+                android:layout_marginEnd="@dimen/_33pxh"
+                android:layout_marginStart="@dimen/_33pxh"
+                android:layout_marginTop="@dimen/_47pxv" android:layout_width="@dimen/_5pxh"/>
+            <ImageView android:id="@+id/imageRectangleSeventyOne"
+                android:layout_gravity="bottom|start"
+                android:layout_height="@dimen/_203pxv"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_rectangle71}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle71"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

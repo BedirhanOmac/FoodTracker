@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_name">bedirhan_s_application</string>
+    <string name="loading">Loading?</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <string name="lbl_continue">Continue</string>
+    <string name="lbl_expiration_date">Expiration date</string>
+    <string name="msg_celery_and_carr">Celery and carrot sticks with hummus
+A piece of fruit (e.g., apple or pear)
+A glass of water
+
+</string>
+    <string name="lbl_sedentary">Sedentary</string>
+    <string name="msg_sample_ingredie">Sample ingredient 1</string>
+    <string name="msg_baked_salmon_or">Baked salmon or grilled portobello mushrooms (for a vegetarian option)
+Steamed broccoli and asparagus
+Quinoa or wild rice
+A glass of water
+
+</string>
+    <string name="msg_afternoon_snack">Afternoon Snack:
+</string>
+    <string name="lbl_red_alert">RED ALERT</string>
+    <string name="lbl_age">Age: </string>
+    <string name="lbl_product_x">Product X</string>
+    <string name="lbl_11_12_2023">11/12/2023</string>
+    <string name="msg_a_handful_of_al">A handful of almonds or mixed nuts
+A piece of string cheese
+A glass of water
+
+</string>
+    <string name="lbl_add_product">Add Product</string>
+    <string name="msg_turn_off_all_se">Turn off all settings</string>
+    <string name="lbl_female">Female</string>
+    <string name="lbl_lunch">Lunch:
+</string>
+    <string name="msg_moderately_acti">Moderately Active</string>
+    <string name="lbl_generate">Generate</string>
+    <string name="msg_what_kind_of_di">What kind of diet do you want?</string>
+    <string name="lbl_add_image">Add image</string>
+    <string name="lbl_add_ingredients">Add Ingredients</string>
+    <string name="msg_discard_expired">Discard expired products from 
+my products automatically</string>
+    <string name="lbl_super_active">Super Active</string>
+    <string name="msg_enter_your_heig">Enter your height: </string>
+    <string name="lbl_1_days_passed">1 days passed</string>
+    <string name="lbl_dinner">Dinner:
+</string>
+    <string name="lbl_lightly_active">Lightly Active</string>
+    <string name="msg_choose_your_lif">Choose your lifestyle</string>
+    <string name="msg_food_tracker">\u201cFood Tracker\u201d Would Like to Access The Camera</string>
+    <string name="lbl_3_days_passed">3 days passed</string>
+    <string name="lbl_4_days_passed">4 days passed</string>
+    <string name="lbl_15_days_passed">15 days passed</string>
+    <string name="lbl_male">Male</string>
+    <string name="msg_ali_veli_bilken">Ali Veli
+Bilkentlio?lu</string>
+    <string name="lbl_11_08_2023">11/08/2023</string>
+    <string name="lbl_diet_help">Diet Help</string>
+    <string name="lbl_14_days_passed">14 days passed</string>
+    <string name="lbl_very_active">Very Active</string>
+    <string name="lbl_7_days_passed">7 days passed</string>
+    <string name="lbl_freshness">freshness</string>
+    <string name="lbl_19">19</string>
+    <string name="msg_enter_your_weig">Enter your weight: </string>
+    <string name="lbl_cancel">Cancel</string>
+    <string name="msg_grilled_chicken">Grilled chicken or tofu salad with mixed greens, cherry tomatoes, cucumbers, and a light vinaigrette dressing
+Quinoa or brown rice
+A glass of water
+
+</string>
+    <string name="lbl_product_x2">product x</string>
+    <string name="msg_this_product_ha">This product has ingredient 1 in it</string>
+    <string name="lbl_profile">Profile</string>
+    <string name="lbl_5_days_passed">5 days passed</string>
+    <string name="msg_personal_inform">Personal Information</string>
+    <string name="msg_ingredients_i_m">Ingredients I\u2019m allergic to</string>
+    <string name="lbl_80_kg">80 kg</string>
+    <string name="msg_sample_product">Sample product 1</string>
+    <string name="msg_protein_based_d">Protein based diet</string>
+    <string name="lbl_11_12_20232">11.12.2023</string>
+    <string name="msg_show_checkboxes">Show checkboxes in shopping list</string>
+    <string name="lbl_ketogenic_diet">Ketogenic diet</string>
+    <string name="msg_remind_products">Remind products close to expiration</string>
+    <string name="msg_enable_expired">Enable expired products list</string>
+    <string name="lbl_shopping_list">Shopping List</string>
+    <string name="lbl_camera">Camera</string>
+    <string name="lbl_close">Close</string>
+    <string name="msg_ingredient1_ing">ingredient1
+ingredient2
+ingredient3
+...</string>
+    <string name="lbl_my_products">My Products</string>
+    <string name="lbl_purchased_date">Purchased date</string>
+    <string name="msg_choose_your_gen">Choose your gender</string>
+    <string name="lbl_morning_snack">Morning Snack:
+</string>
+    <string name="msg_notify_me_if_a">Notify me if a new product is added to shopping list</string>
+    <string name="msg_scrambled_eggs">Scrambled eggs with spinach and tomatoes
+A side of Greek yogurt with honey and fresh berries
+Whole-grain toast or a serving of oatmeal
+A glass of water or herbal tea
+
+</string>
+    <string name="msg_maintenance_cal">Maintenance Calories Calculator</string>
+    <string name="msg_weight_loss_die">Weight loss diet</string>
+    <string name="lbl_ok">OK</string>
+    <string name="lbl_profile_login">Profile Login</string>
+    <string name="msg_sample_product2">Sample product 2</string>
+    <string name="msg_low_fat_cottage">Low-fat cottage cheese with a drizzle of honey
+A glass of water or herbal tea</string>
+    <string name="msg_sample_product3">Sample product 3</string>
+    <string name="msg_sample_product4">Sample product 4</string>
+    <string name="msg_sample_product5">Sample product 5</string>
+    <string name="lbl_settings">Settings</string>
+    <string name="lbl_160_cm">160 cm</string>
+    <string name="msg_sample_product6">Sample product 6</string>
+    <string name="lbl_diet_planner">Diet Planner</string>
+    <string name="msg_expired_product">Expired Products</string>
+    <string name="msg_evening_snack">Evening Snack (optional):
+</string>
+    <string name="lbl_breakfast">Breakfast:
+</string>
+    <string name="msg_unwanted_ingred">Unwanted ingredients</string>
+    <string name="msg_enter_product_n">Enter product name</string>
+    <string name="msg_breakfast_scra">Breakfast:
+Scrambled eggs with spinach and tomatoes
+A side of Greek yogurt with honey and fresh berries
+Whole-grain toast or a serving of oatmeal
+A glass of water or herbal tea
+
+Morning Snack:
+A handful of almonds or mixed nuts
+A piece of string cheese
+A glass of water
+
+Lunch:
+Grilled chicken or tofu salad with mixed greens, cherry tomatoes, cucumbers, and a light vinaigrette dressing
+Quinoa or brown rice
+A glass of water
+
+Afternoon Snack:
+Celery and carrot sticks with hummus
+A piece of fruit (e.g., apple or pear)
+A glass of water
+
+Dinner:
+Baked salmon or grilled portobello mushrooms (for a vegetarian option)
+Steamed broccoli and asparagus
+Quinoa or wild rice
+A glass of water
+
+Evening Snack (optional):
+Low-fat cottage cheese with a drizzle of honey
+A glass of water or herbal tea</string>
+    <string name="lbl_ingredients">Ingredients</string>
+    <string name="msg_weight_gain_die">Weight gain diet</string>
+    <string name="msg_this_contact_has_no_phone_nu">This contact has no phone number</string>
+    <string name="msg_camera_storage_permission">This Application need permission\n1.Camera permission to capture the image.\n2.Storage Access permission to save the captured image.</string>
+    <string name="lbl_gallery">Gallery</string>
+</resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listsampleingredieRowModel" type="com.bedirhansapplication.app.modules.profile.data.model.ListsampleingredieRowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStacksampleingredie"
+        android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:id="@+id/linearColumnsampleingredie"
+            android:layout_gravity="bottom|start"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius_3">
+            <LinearLayout android:gravity="end"
+                android:id="@+id/linearRowsampleingredie"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_39pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSampleingredie"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.91"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listsampleingredieRowModel.txtSampleingredie}"
+                    style="@style/txtPoppinsregular18_1" tools:text="@string/msg_sample_ingredie"/>
+                <ImageView android:id="@+id/imageSampleProfilePhoto"
+                    android:layout_height="@dimen/_18pxh"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_marginStart="@dimen/_116pxh"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_resim2023103_17x17"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_resim2023103_17x17"/>
+            </LinearLayout>
+            <View android:background="@color/indigo_200"
+                android:id="@+id/lineVector704"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_3pxv" android:layout_width="@dimen/_347pxh"/>
+            <LinearLayout android:gravity="end"
+                android:id="@+id/linearRowsampleingredieOne"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_7pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSampleingredieOne"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.91"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listsampleingredieRowModel.txtSampleingredieOne}"
+                    style="@style/txtPoppinsregular18_1" tools:text="@string/msg_sample_ingredie"/>
+                <ImageView android:id="@+id/imageSampleRect"
+                    android:layout_height="@dimen/_18pxh"
+                    android:layout_marginBottom="@dimen/_7pxv"
+                    android:layout_marginStart="@dimen/_116pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_resim2023103_17x17"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_resim2023103_17x17"/>
+            </LinearLayout>
+            <View android:background="@color/indigo_200"
+                android:id="@+id/lineVector705"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_3pxv" android:layout_width="@dimen/_347pxh"/>
+            <LinearLayout android:gravity="end"
+                android:id="@+id/linearRowsampleingredieTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_6pxv"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_7pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSampleingredieTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.91"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listsampleingredieRowModel.txtSampleingredieTwo}"
+                    style="@style/txtPoppinsregular18_1" tools:text="@string/msg_sample_ingredie"/>
+                <ImageView android:id="@+id/imageDiscardIcon"
+                    android:layout_height="@dimen/_18pxh"
+                    android:layout_marginBottom="@dimen/_7pxv"
+                    android:layout_marginStart="@dimen/_116pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_resim2023103_17x17"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_resim2023103_17x17"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowunwantedingred"
+            android:layout_gravity="top|start"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStyleorange_300cornerRadius">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtUnwantedingred"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4pxv"
+                android:layout_marginStart="@dimen/_45pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_weight="0.88" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{listsampleingredieRowModel.txtUnwantedingred}"
+                style="@style/txtPoppinssemibold18" tools:text="@string/msg_unwanted_ingred"/>
+            <ImageView android:id="@+id/imagePlus"
+                android:layout_height="@dimen/_30pxh"
+                android:layout_marginBottom="@dimen/_4pxv"
+                android:layout_marginEnd="@dimen/_2pxh"
+                android:layout_marginStart="@dimen/_93pxh"
+                android:layout_marginTop="@dimen/_6pxv"
+                android:layout_width="@dimen/_26pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_plus"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_plus"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>
