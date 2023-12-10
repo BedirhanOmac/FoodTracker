@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <include domain="database" path="databases/my_database.db" />
+    <include domain="file" path="documents/" />
+    <exclude domain="file" path="cache/temporary_cache_file1.txt" />
+    <exclude domain="file" path="cache/temporary_cache_file2.txt" />
+</full-backup-content>

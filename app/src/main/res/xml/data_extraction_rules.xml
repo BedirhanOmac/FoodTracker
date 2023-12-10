@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <rule name="ExtractAllFiles" path="files/" />
+    <rule name="ExtractSpecificImages" path="images/image1.jpg" />
+    <rule name="ExtractSpecificImages" path="images/image2.jpg" />
+    <rule name="ExtractSQLiteDatabase" path="databases/my_database.db" />
+</data-extraction-rules>
