@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearColumnresim2023103"
+        style="@style/groupStylecornerRadius"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_gravity="bottom|start"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="136dp">
+
+        <FrameLayout
+            android:id="@+id/frameStackresim2023103"
+            android:layout_width="@dimen/_336pxh"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_11pxh"
+            android:layout_marginTop="@dimen/_38pxv"
+            android:layout_marginEnd="@dimen/_11pxh">
+
+            <ImageView
+                android:id="@+id/imageSampleRectTwoProfileLog"
+                android:layout_width="@dimen/_17pxh"
+                android:layout_height="@dimen/_17pxh"
+                android:layout_gravity="top|end"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_marginEnd="@dimen/_2pxh"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_resim2023103_17x17"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_resim2023103_17x17" />
+
+            <EditText
+                android:id="@+id/etGroupNinetyThree2"
+                style="@style/etPoppinsregular17"
+                android:layout_width="240dp"
+                android:layout_height="37dp"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:hint="@string/msg_sample_ingredie"
+                android:inputType="text"
+                android:paddingStart="@dimen/_8pxh"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_4pxv"
+                android:singleLine="true"
+                android:text="@={profileloginVM.profileloginModel.etGroupNinetyThreeValue}"
+                android:textColorHint="@color/gray_900"
+                tools:ignore="Autofill" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtSampleingredie"
+            style="@style/txtPoppinsregular17"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.91"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@{profileloginVM.profileloginModel.txtSampleingredie}"
+            tools:text="@string/msg_sample_ingredie" />
+
+        <FrameLayout
+            android:id="@+id/frameStackresim2023103One"
+            android:layout_width="@dimen/_336pxh"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_11pxh"
+            android:layout_marginTop="@dimen/_6pxv"
+            android:layout_marginEnd="@dimen/_11pxh">
+
+            <ImageView
+                android:id="@+id/imageDiscardIconPersonalInfo"
+                android:layout_width="@dimen/_17pxh"
+                android:layout_height="@dimen/_17pxh"
+                android:layout_gravity="top|end"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_marginEnd="@dimen/_2pxh"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_resim2023103_17x17"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_resim2023103_17x17" />
+
+            <EditText
+                android:id="@+id/etGroupNinetyThree"
+                style="@style/etPoppinsregular17"
+                android:layout_width="240dp"
+                android:layout_height="37dp"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:hint="@string/msg_sample_ingredie"
+                android:inputType="text"
+                android:paddingStart="@dimen/_8pxh"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_4pxv"
+                android:singleLine="true"
+                android:text="@={profileloginVM.profileloginModel.etGroupNinetyThreeValue}"
+                android:textColorHint="@color/gray_900"
+                tools:ignore="Autofill" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameStackresim2023103"
+            android:layout_width="@dimen/_336pxh"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_11pxh"
+            android:layout_marginTop="@dimen/_38pxv"
+            android:layout_marginEnd="@dimen/_11pxh">
+
+            <ImageView
+                android:id="@+id/imageSampleRectTwoProfileLog"
+                android:layout_width="@dimen/_17pxh"
+                android:layout_height="@dimen/_17pxh"
+                android:layout_gravity="top|end"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_marginEnd="@dimen/_2pxh"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_resim2023103_17x17"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_resim2023103_17x17" />
+
+            <EditText
+                android:id="@+id/etGroupNinetyFive"
+                style="@style/etPoppinsregular17"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:hint="@string/msg_sample_ingredie"
+                android:inputType="text"
+                android:paddingStart="@dimen/_8pxh"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_4pxv"
+                android:singleLine="true"
+                android:text="@={profileloginVM.profileloginModel.etGroupNinetyFiveValue}"
+                android:textColorHint="@color/gray_900"
+                tools:ignore="Autofill" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameStackresim2023103One"
+            android:layout_width="@dimen/_336pxh"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_11pxh"
+            android:layout_marginTop="@dimen/_6pxv"
+            android:layout_marginEnd="@dimen/_11pxh">
+
+            <ImageView
+                android:id="@+id/imageDiscardIconPersonalInfo"
+                android:layout_width="@dimen/_17pxh"
+                android:layout_height="@dimen/_17pxh"
+                android:layout_gravity="top|end"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_marginEnd="@dimen/_2pxh"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_resim2023103_17x17"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_resim2023103_17x17" />
+
+            <EditText
+                android:id="@+id/etGroupNinetyThree"
+                style="@style/etPoppinsregular17"
+                android:layout_width="240dp"
+                android:layout_height="37dp"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:hint="@string/msg_sample_ingredie"
+                android:inputType="text"
+                android:paddingStart="@dimen/_8pxh"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_4pxv"
+                android:singleLine="true"
+                android:text="@={profileloginVM.profileloginModel.etGroupNinetyThreeValue}"
+                android:textColorHint="@color/gray_900"
+                tools:ignore="Autofill" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPersonalInformation2"
+        style="@style/btnSolidRoundedOutline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingStart="@dimen/_30pxh"
+        android:paddingTop="@dimen/_3pxv"
+        android:paddingEnd="@dimen/_30pxh"
+        android:paddingBottom="@dimen/_3pxv"
+        android:singleLine="true"
+        android:text="@string/msg_personal_inform"
+        android:textAllCaps="false"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="35dp"
+        tools:text="@string/msg_personal_inform" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
