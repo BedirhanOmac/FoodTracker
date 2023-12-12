@@ -38,18 +38,6 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/img_arrowleft"
                         tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
-                    <TextView android:ellipsize="end"
-                        android:id="@+id/txtCamera"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_14pxv"
-                        android:layout_marginEnd="@dimen/_156pxh"
-                        android:layout_marginStart="@dimen/_110pxh"
-                        android:layout_marginTop="@dimen/_18pxv"
-                        android:layout_weight="0.81"
-                        android:layout_width="0dp"
-                        android:singleLine="true"
-                        android:text="@{camverifyVM.camverifyModel.txtCamera}"
-                        style="@style/txtPoppinssemibold23" tools:text="@string/lbl_camera"/>
                 </LinearLayout>
             </androidx.appcompat.widget.Toolbar>
             <LinearLayout android:gravity="center_horizontal"
