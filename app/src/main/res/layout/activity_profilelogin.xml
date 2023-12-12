@@ -19,26 +19,21 @@
             android:paddingTop="@dimen/_14pxv" android:singleLine="true"
             android:text="@string/lbl_profile_login"
             android:textAllCaps="false" style="@style/btnSolid" tools:text="@string/lbl_profile_login"/>
-
         <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
             android:id="@+id/btnPersonalInformation"
-            style="@style/btnSolidRoundedOutline"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_24pxh"
             android:layout_marginStart="@dimen/_25pxh"
             android:layout_marginTop="@dimen/_224pxv"
-            android:layout_marginEnd="@dimen/_24pxh"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:paddingStart="@dimen/_30pxh"
-            android:paddingTop="@dimen/_3pxv"
-            android:paddingEnd="@dimen/_30pxh"
+            android:layout_width="match_parent"
             android:paddingBottom="@dimen/_3pxv"
-            android:singleLine="true"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_3pxv" android:singleLine="true"
             android:text="@string/msg_personal_inform"
             android:textAllCaps="false"
-            tools:text="@string/msg_personal_inform" />
-
+            style="@style/btnSolidRoundedOutline" tools:text="@string/msg_personal_inform"/>
         <FrameLayout android:id="@+id/frameStacksampleingredie"
             android:layout_gravity="center_horizontal"
             android:layout_height="@dimen/_165pxv"
@@ -69,23 +64,20 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/img_resim2023103_17x17"
                         tools:ignore="ContentDescription" tools:src="@drawable/img_resim2023103_17x17"/>
-
-                    <EditText
-                        android:id="@+id/etGroupNinetyThree"
-                        style="@style/etPoppinsregular17"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:ellipsize="end"
+                    <EditText android:ellipsize="end"
                         android:hint="@string/msg_sample_ingredie"
+                        android:id="@+id/etGroupNinetyThree"
                         android:inputType="text"
-                        android:paddingStart="@dimen/_8pxh"
-                        android:paddingEnd="@dimen/_30pxh"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
                         android:paddingBottom="@dimen/_4pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_8pxh"
                         android:singleLine="true"
                         android:text="@={profileloginVM.profileloginModel.etGroupNinetyThreeValue}"
                         android:textColorHint="@color/gray_900"
-                        tools:ignore="Autofill" />
+                        style="@style/etPoppinsregular17" tools:ignore="Autofill"/>
                 </FrameLayout>
                 <FrameLayout android:id="@+id/frameStackresim2023103One"
                     android:layout_gravity="center_horizontal"
@@ -298,45 +290,35 @@
                 android:textColorHint="@color/gray_900"
                 style="@style/etSolidRounded_3" tools:ignore="Autofill"/>
         </FrameLayout>
-
-        <LinearLayout
+        <LinearLayout android:gravity="end"
             android:id="@+id/linearRowcontinue"
-            style="@style/groupStyleblue_200cornerRadius"
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_41pxv"
+            android:layout_marginEnd="@dimen/_24pxh"
             android:layout_marginStart="@dimen/_24pxh"
             android:layout_marginTop="@dimen/_26pxv"
-            android:layout_marginEnd="@dimen/_24pxh"
-            android:layout_marginBottom="@dimen/_41pxv"
-            android:gravity="end"
-            android:orientation="horizontal">
-
-            <TextView
+            android:layout_width="wrap_content"
+            android:orientation="horizontal" style="@style/groupStyleblue_200cornerRadius">
+            <TextView android:ellipsize="end"
                 android:id="@+id/txtContinue"
-                style="@style/txtPoppinssemibold17"
-                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_9pxv"
                 android:layout_marginStart="@dimen/_24pxh"
                 android:layout_marginTop="@dimen/_8pxv"
-                android:layout_marginBottom="@dimen/_9pxv"
-                android:layout_weight="0.86"
-                android:ellipsize="end"
+                android:layout_weight="0.86" android:layout_width="0dp"
                 android:singleLine="true"
                 android:text="@{profileloginVM.profileloginModel.txtContinue}"
-                tools:text="@string/lbl_continue" />
-
-            <ImageView
-                android:id="@+id/imageArrowright"
-                android:layout_width="@dimen/_13pxh"
+                style="@style/txtPoppinssemibold17" tools:text="@string/lbl_continue"/>
+            <ImageView android:id="@+id/imageArrowright"
                 android:layout_height="@dimen/_12pxh"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginEnd="@dimen/_27pxh"
                 android:layout_marginStart="@dimen/_12pxh"
                 android:layout_marginTop="@dimen/_16pxv"
-                android:layout_marginEnd="@dimen/_27pxh"
-                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_width="@dimen/_13pxh"
                 android:scaleType="fitXY"
                 android:src="@drawable/img_arrowright"
-                tools:ignore="ContentDescription"
-                tools:src="@drawable/img_arrowright" />
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
         </LinearLayout>
     </LinearLayout>
 </layout>

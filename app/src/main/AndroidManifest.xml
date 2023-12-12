@@ -19,7 +19,7 @@
         </activity>
 
         <activity
-            android:name=".set"
+            android:name=".loading"
             android:exported="true"
             android:label="New Activity">
             <intent-filter>
