@@ -48,23 +48,38 @@ public class ProductController {
 
         productRepository.insertOrUpdateProductData(newProduct);
     }
-   public ArrayList<String> convertResultSetToStringList() {
-        ArrayList<String> stringList = new ArrayList<>();
-        String resultString =  "";
-        ArrayList<ResultSet> resultSetList = productRepository.retrieveShoppingListProducts();
 
-        for (ResultSet resultSet : resultSetList) {
-            try {
-                resultString = resultSet.getString("ProductName") +
-                        " - " + resultSet.getString("UserName") +
-                        " - " + resultSet.getDate("Expiration_Date") +
+    public ArrayList<Product> getExpiredProducts() {
+        return productRepository.retrieveExpiredProducts();
+    }
 
-                stringList.add(resultString);
-            } catch (SQLException e) {
-                e.printStackTrace();
+    public ArrayList<Product> removeProductById(int productID) {
+        ArrayList<Product> productList = productRepository.retrieveAllProducts();
+        ArrayList<Product> updatedList = new ArrayList<>();
+
+        for (Product product : productList) {
+            if (product.getProductID() != productID) {
+                updatedList.add(product);
             }
         }
-
-        return stringList;
+        productRepository.removeProduct(productID);
+        return updatedList;
     }
+
+    public String determineFreshness(Product prd) {
+        long allTime = prd.getExpirationDate().getTime() - prd.getPurchaseDate().getTime();
+        long passedTime = System.currentTimeMillis() - prd.getPurchaseDate().getTime();
+
+        if (passedTime <= allTime * 0.2) {
+            return "Fresh";
+        }
+        else if (allTime * 0.2 < passedTime && passedTime <= allTime * 0.8){
+            return "Good";
+        }
+        return "Expiring";
+    }
+
+
+
+
 }

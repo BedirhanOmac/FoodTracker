@@ -1,13 +1,32 @@
 package com.example.foodtrackerv1012;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ProductRepository {
+    private static Timer expirationTimer;
+    private static final long DELAY_MILLIS = 0; // Initial delay before the first execution
+    private static final long PERIOD_MILLIS = 3600000; // 1 hour in milliseconds
+
+    public ProductRepository() {
+        expirationTimer = new Timer();
+        expirationTimer.scheduleAtFixedRate(new ExpirationCheckTask(), DELAY_MILLIS, PERIOD_MILLIS);
+    }
+    private class ExpirationCheckTask extends TimerTask {
+        @Override
+        public void run() {
+            // Perform expiration check and update ArrayList here
+            retrieveExpiredProducts();
+        }
+    }
+
     public void createProductTable() {
         try (Connection connection = DriverManager.getConnection("jdbc:sqlite:sample.db")) {
             // Create Product table
@@ -57,8 +76,8 @@ public class ProductRepository {
         return product;
     }
 
-    public ArrayList<ResultSet> retrieveExpiredProducts() {
-        ArrayList<ResultSet> expiredList = new ArrayList<>();
+    public ArrayList<Product> retrieveExpiredProducts() {
+        ArrayList<Product> expiredList = new ArrayList<>();
 
         try (Connection connection = DriverManager.getConnection("jdbc:sqlite:your_database.db")) {
             String query = "SELECT products.Product_ID, products.User_ID, products.Name AS ProductName, " +
@@ -71,10 +90,11 @@ public class ProductRepository {
                     "WHERE products.Expiration_Date < date('now')";
 
             try (PreparedStatement statement = connection.prepareStatement(query);
-                    ResultSet resultSet = statement.executeQuery()) {
+                 ResultSet resultSet = statement.executeQuery()) {
 
                 while (resultSet.next()) {
-                    expiredList.add(resultSet);
+                    Product product = mapResultSetToProduct(resultSet);
+                    expiredList.add(product);
                 }
             }
 
@@ -83,6 +103,24 @@ public class ProductRepository {
         }
 
         return expiredList;
+    }
+
+    private Product mapResultSetToProduct(ResultSet resultSet) throws SQLException {
+        String name = resultSet.getString("ProductName");
+        Date expirationDate = resultSet.getDate("Expiration_Date");
+        String photo = resultSet.getString("Photo");
+        Date purchaseDate = resultSet.getDate("Purchase_Date");
+
+        String ingredientsString = resultSet.getString("Ingredients");
+        String[] ingredientsArray = ingredientsString.split(", ");
+        ArrayList<String> ingredientsList = new ArrayList<>();
+        for (String ingredient : ingredientsArray) {
+            ingredientsList.add(ingredient);
+        }
+
+        Product product = new Product(name, expirationDate, photo, purchaseDate, ingredientsList);
+
+        return product;
     }
 
     public ArrayList<ResultSet> retrieveShoppingListProducts() {
@@ -113,24 +151,25 @@ public class ProductRepository {
         return shoppigtList;
     }
 
-    public ArrayList<ResultSet> retrieveAllProducts() {
-        ArrayList<ResultSet> productList = new ArrayList<>();
-    
+    public ArrayList<Product> retrieveAllProducts() {
+        ArrayList<Product> productList = new ArrayList<>();
+
         try (Connection connection = DriverManager.getConnection("jdbc:sqlite:your_database.db")) {
             String query = "SELECT * FROM products";
-    
+
             try (PreparedStatement statement = connection.prepareStatement(query);
                  ResultSet resultSet = statement.executeQuery()) {
-    
+
                 while (resultSet.next()) {
-                    productList.add(resultSet);
+                    Product product = mapResultSetToProduct(resultSet);
+                    productList.add(product);
                 }
             }
-    
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    
+
         return productList;
     }
 
@@ -145,4 +184,6 @@ public class ProductRepository {
             e.printStackTrace();
         }
     }
+
+
 }
