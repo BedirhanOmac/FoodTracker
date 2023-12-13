@@ -20,10 +20,10 @@ public class GPTactivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gptactivity2);
+        setContentView(R.layout.activity_dietprogram);
 
         Intent intent = getIntent();
-        generateArea = findViewById(R.id.generateOUTPUT);
+        generateArea = findViewById(R.id.textGenerated);
         generateArea.setText("PLEASE WAIT, YOUR PLAN IS BEING GENERATED...");
 
         String promptText = intent.getStringExtra("PROMPT");

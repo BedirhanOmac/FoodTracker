@@ -1,9 +1,12 @@
 package com.example.foodtrackerv1012;
 
-import java.util.ArrayList;
-import java.sql.Date;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class Product {
+import java.sql.Date;
+import java.util.ArrayList;
+
+public class Product implements Parcelable {
     private String name;
     private Date expirationDate;
     private String photo;
@@ -13,7 +16,7 @@ public class Product {
     private static final int userID = 1;
 
     public Product(String name, Date expirationDate, String photo, Date purchaseDate,
-            ArrayList<String> ingredients) {
+                   ArrayList<String> ingredients) {
         this.name = name;
         this.expirationDate = expirationDate;
         this.ingredients = ingredients;
@@ -22,9 +25,45 @@ public class Product {
         productID++;
     }
 
-  public Date getExpirationDate() {
-      return expirationDate;
-  }
+    protected Product(Parcel in) {
+        name = in.readString();
+        expirationDate = (Date) in.readSerializable();
+        photo = in.readString();
+        purchaseDate = (Date) in.readSerializable();
+        ingredients = in.createStringArrayList();
+        productID = in.readInt();
+    }
+
+    public static final Creator<Product> CREATOR = new Creator<Product>() {
+        @Override
+        public Product createFromParcel(Parcel in) {
+            return new Product(in);
+        }
+
+        @Override
+        public Product[] newArray(int size) {
+            return new Product[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeSerializable(expirationDate);
+        dest.writeString(photo);
+        dest.writeSerializable(purchaseDate);
+        dest.writeStringList(ingredients);
+        dest.writeInt(productID);
+    }
+
+    public Date getExpirationDate() {
+        return expirationDate;
+    }
 
     public ArrayList<String> getIngredients() {
         return ingredients;
@@ -42,17 +81,17 @@ public class Product {
         return productID;
     }
 
-  public Date getPurchaseDate() {
-      return purchaseDate;
-  }
+    public Date getPurchaseDate() {
+        return purchaseDate;
+    }
 
     public static int getUserid() {
         return userID;
     }
 
-   public void setExpirationDate(Date expirationDate) {
-       this.expirationDate = expirationDate;
-   }
+    public void setExpirationDate(Date expirationDate) {
+        this.expirationDate = expirationDate;
+    }
 
     public void setIngredients(ArrayList<String> ingredients) {
         this.ingredients = ingredients;
@@ -69,5 +108,4 @@ public class Product {
     public static void setProductID(int productID) {
         Product.productID = productID;
     }
-
 }

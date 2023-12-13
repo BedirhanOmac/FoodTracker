@@ -24,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -43,7 +44,10 @@ import com.google.mlkit.vision.text.latin.TextRecognizerOptions;
 import java.io.IOException;
 
 public class    OCRactivity extends AppCompatActivity {
-
+    ProductController controller = new ProductController();
+    Product newProduct = new Product(null, null, null, null,null);
+    private Button saveIngredientsButton;
+    String ingredients;
     //UI views
     private MaterialButton inputImageBtn;
     private MaterialButton recognizeTextBtn;
@@ -77,6 +81,12 @@ public class    OCRactivity extends AppCompatActivity {
 
         textRecognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
 
+        saveIngredientsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                controller.addIngredient(newProduct,ingredients);
+            }
+        });
 
 
         inputImageBtn.setOnClickListener(new View.OnClickListener() {
@@ -117,6 +127,7 @@ public class    OCRactivity extends AppCompatActivity {
                             String recognizedText = text.getText();
                             Log.d(TAG, "onSuccess: recognizedText: " + recognizedText);
                             recognizedTextEt.setText(recognizedText);
+                            ingredients = recognizedText;
 
                         }
                     })
@@ -241,6 +252,11 @@ public class    OCRactivity extends AppCompatActivity {
         boolean cameraResult = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == (PackageManager.PERMISSION_GRANTED);
         boolean storageResult = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == (PackageManager.PERMISSION_GRANTED);
         return cameraResult && storageResult;
+    }
+
+    private void launchAddProductActivity(){
+        Intent intent = new Intent(this, addproduct.class);
+        intent.putExtra("new Product",newProduct);
     }
 
 

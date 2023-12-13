@@ -9,6 +9,7 @@
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/round_drawable"
         android:backgroundTint="#514CAF50"
         android:text="Prepare my DIet!"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
@@ -74,15 +75,15 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="173dp">
+                android:layout_height="108dp">
 
                 <ImageView
                     android:id="@+id/imageView9"
                     android:layout_width="91dp"
                     android:layout_height="107dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.103"
+                    app:layout_constraintHorizontal_bias="0.09"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/img_frame8" />
@@ -120,14 +121,14 @@
                 android:textStyle="bold" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="346dp"
-                android:layout_height="209dp"
+                android:layout_width="376dp"
+                android:layout_height="217dp"
                 android:layout_gravity="center"
                 android:background="@color/gray_300">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="335dp"
-                    android:layout_height="113dp"
+                    android:layout_width="358dp"
+                    android:layout_height="121dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -143,18 +144,19 @@
                         app:layout_constraintStart_toStartOf="parent">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="335dp"
                             android:layout_height="match_parent">
 
                             <RadioButton
                                 android:id="@+id/radioButton6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="4dp"
                                 android:text="Very Active"
                                 android:textSize="12dp"
-                                app:layout_constraintStart_toStartOf="parent"
-                                tools:layout_editor_absoluteY="0dp" />
+                                app:layout_constraintBottom_toTopOf="@+id/radioButton5"
+                                app:layout_constraintEnd_toEndOf="@+id/radioButton3"
+                                app:layout_constraintHorizontal_bias="0.068"
+                                app:layout_constraintStart_toStartOf="parent" />
 
                             <RadioButton
                                 android:id="@+id/radioButton3"
@@ -164,8 +166,8 @@
                                 android:textSize="12sp"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="1.0"
-                                app:layout_constraintStart_toEndOf="@+id/radioButton6"
-                                tools:layout_editor_absoluteY="3dp" />
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:layout_editor_absoluteY="6dp" />
 
                             <RadioButton
                                 android:id="@+id/radioButton4"
@@ -173,28 +175,32 @@
                                 android:layout_height="31dp"
                                 android:text="Lightly Active"
                                 android:textSize="12dp"
-                                tools:layout_editor_absoluteX="4dp"
-                                tools:layout_editor_absoluteY="63dp" />
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.088"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:layout_editor_absoluteY="66dp" />
 
                             <RadioButton
                                 android:id="@+id/radioButton7"
                                 android:layout_width="122dp"
                                 android:layout_height="31dp"
-                                android:layout_marginEnd="32dp"
                                 android:text="Super Active"
                                 android:textSize="12dp"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                tools:layout_editor_absoluteY="32dp" />
+                                app:layout_constraintHorizontal_bias="0.845"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:layout_editor_absoluteY="35dp" />
 
                             <RadioButton
                                 android:id="@+id/radioButton5"
                                 android:layout_width="138dp"
                                 android:layout_height="33dp"
-                                android:layout_marginEnd="24dp"
                                 android:text="Moderately Active"
                                 android:textSize="12dp"
-                                app:layout_constraintEnd_toStartOf="@+id/radioButton7"
-                                tools:layout_editor_absoluteY="32dp" />
+                                app:layout_constraintBottom_toTopOf="@+id/radioButton4"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.081"
+                                app:layout_constraintStart_toStartOf="parent" />
 
                             <EditText
                                 android:id="@+id/kgInput"
@@ -202,8 +208,9 @@
                                 android:layout_height="42dp"
                                 android:text="Your kg:"
                                 android:textSize="15dp"
-                                tools:layout_editor_absoluteX="178dp"
+                                tools:layout_editor_absoluteX="180dp"
                                 tools:layout_editor_absoluteY="64dp" />
+
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </RadioGroup>
@@ -292,6 +299,7 @@
                     android:id="@+id/KetogenicDiet"
                     android:layout_width="276dp"
                     android:layout_height="38dp"
+                    android:background="@drawable/round_drawable"
                     android:backgroundTint="#27216EF3"
                     android:text="KetogenIc DIet"
                     android:textSize="15dp"
@@ -303,6 +311,7 @@
                     android:id="@+id/ProteinDiet"
                     android:layout_width="276dp"
                     android:layout_height="38dp"
+                    android:background="@drawable/round_drawable"
                     android:backgroundTint="#2DFF5722"
                     android:fontFamily="@font/poppins"
                     android:text="ProteIn Based DIet"
@@ -317,6 +326,7 @@
                     android:id="@+id/WeightlossDiet"
                     android:layout_width="276dp"
                     android:layout_height="38dp"
+                    android:background="@drawable/round_drawable"
                     android:backgroundTint="#3121F3D3"
                     android:text="WeIght Loss DIet"
                     android:textSize="15dp"
@@ -329,6 +339,7 @@
                     android:id="@+id/WeightGainDiet"
                     android:layout_width="276dp"
                     android:layout_height="38dp"
+                    android:background="@drawable/round_drawable"
                     android:backgroundTint="#0C21F387"
                     android:text="WeIght GaIn DIet"
                     android:textSize="15dp"
