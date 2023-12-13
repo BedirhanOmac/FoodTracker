@@ -8,8 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
-            allergensEditText = findViewById(R.id.editTextText2);
-            continueButton = findViewById(R.id.button2);
+
     public class loading extends AppCompatActivity {
 
         private EditText allergensEditText;
@@ -27,8 +26,9 @@ import androidx.appcompat.app.AppCompatActivity;
                 public void onClick(View v) {
                     onContinueButtonClick();
         }
-                }
+
             });
+    }
 
         private void onContinueButtonClick() {
 
