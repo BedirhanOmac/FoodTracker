@@ -44,20 +44,22 @@ public class addproduct extends AppCompatActivity{
         rectangle_.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(addproduct.this, OCRactivity.class);
+                startActivity(intent);
             }
         });
 
         rectangle_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(addproduct.this, OCRactivity.class);
+                startActivity(intent);
             }
         });
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(addproduct.this, product.class);
+                Intent intent = new Intent(addproduct.this, MyProductsActivity.class);
                 startActivity(intent);
 
             }
