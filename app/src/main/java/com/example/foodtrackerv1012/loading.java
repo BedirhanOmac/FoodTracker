@@ -6,9 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 
+            allergensEditText = findViewById(R.id.editTextText2);
+            continueButton = findViewById(R.id.button2);
     public class loading extends AppCompatActivity {
 
         private EditText allergensEditText;
@@ -20,16 +21,14 @@ import androidx.appcompat.app.AppCompatActivity;
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_login);
 
-            allergensEditText = findViewById(R.id.editTextText2);
             unwantedIngredientsEditText = findViewById(R.id.editTextText3);
-            continueButton = findViewById(R.id.button2);
 
             continueButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     onContinueButtonClick();
+        }
                 }
             });
-        }
 
         private void onContinueButtonClick() {
 
@@ -50,5 +49,3 @@ import androidx.appcompat.app.AppCompatActivity;
             startActivity(intent);
         }
     }
-
-
