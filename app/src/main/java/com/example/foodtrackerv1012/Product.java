@@ -46,6 +46,10 @@ public class Product implements Parcelable {
         }
     };
 
+    public Product(String p1) {
+        this.name =p1;
+    }
+
     @Override
     public int describeContents() {
         return 0;

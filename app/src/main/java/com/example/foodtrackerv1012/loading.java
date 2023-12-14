@@ -25,17 +25,16 @@ import androidx.appcompat.app.AppCompatActivity;
             continueButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     onContinueButtonClick();
-<<<<<<< Updated upstream
+
         }
 
             });
     }
-=======
-                }
->>>>>>> Stashed changes
 
-            });
-        }
+
+
+
+
         private void onContinueButtonClick() {
 
 

@@ -23,7 +23,7 @@ public class addproduct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.addproduct);
 
-        View rectangle_ = findViewById(R.id.rectangle_);
+
         View rectangle_2 = findViewById(R.id.rectangle_2);
         View rectangle_3 = findViewById(R.id.rectangle_2);
         View back = findViewById(R.id.imageView2);
@@ -40,13 +40,7 @@ public class addproduct extends AppCompatActivity {
                 }
             });
 
-            rectangle_.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(addproduct.this, OCRactivity.class);
-                    startActivity(intent);
-                }
-            });
+
 
             rectangle_3.setOnClickListener(new View.OnClickListener() {
                 @Override

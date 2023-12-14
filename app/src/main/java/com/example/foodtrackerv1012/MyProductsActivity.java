@@ -3,7 +3,7 @@ package com.example.foodtrackerv1012;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-package com.example.foodtrackerv1012;
+
 import android.widget.TextView;
 
 import android.content.Intent;
@@ -32,31 +32,34 @@ public class MyProductsActivity extends AppCompatActivity {
     ArrayList<ProductModel> models = new ArrayList<>();
 
     private void setProductModels() {
-        ProductRepository repo = new ProductRepository();
-        ArrayList<Product> products =repo.retrieveAllProducts();
+
         ArrayList<String> productnames = new ArrayList<>();
         ArrayList<String> productFreshness = new ArrayList<>();
         ArrayList<String> expirationDate = new ArrayList<>();
 
-        for(int i= 0;i<products.size();i++) {
-            productnames.set(i,products.get(i).getName());
-            expirationDate.set(i, products.get(i).getExpirationDate().toString());
+        productFreshness.add("4");productFreshness.add("5");productFreshness.add("6");
+        productnames.add("p1");productnames.add("p2");productnames.add("p3");
+        expirationDate.add("date1");expirationDate.add("date2");expirationDate.add("date3");
 
-        }
+
 
 
 
         for (int i = 0;i<productnames.size();i++) {
-            models.add(new ProductModel(productnames[i],productFreshness[i],expirationDate[i]));
+            models.add(new ProductModel(productnames.get(i),productFreshness.get(i),expirationDate.get(i)));
         }
     }
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycleview);
-        RecyclerView ğ = findViewById(R.id.recyclerView);
+        RecyclerView recView = findViewById(R.id.recyclerView);
         setProductModels();
-        Recyclerviewadapter adapter = new Recyclerviewadapter(this,new ArrayList<>());
-        ğ.setAdapter(adapter);
-        ğ.setLayoutManager(new LinearLayoutManager(this));
+        Recyclerviewadapter adapter = new Recyclerviewadapter(this,models);
+        recView.setAdapter(adapter);
+        recView.setLayoutManager(new LinearLayoutManager(this));
+        // Add space between items
+        int verticalSpaceHeight = 30; // Adjust this value as needed
+        recView.addItemDecoration(new SpacesItemDecoration(verticalSpaceHeight));
     }
 }
